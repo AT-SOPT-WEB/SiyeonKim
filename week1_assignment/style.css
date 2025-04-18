@@ -6,24 +6,16 @@ body{
 /*헤더*/
 header {
     display: flex;
-    background-color: rgb(175, 121, 204);
-    flex-direction: row;
-    justify-content: space-between;
+    background-color: #af79cc;
     position: fixed;
     width: 100%;
 }
 
 /*하트 아이콘 크기*/
-#heart{
+.fa-heart{
     width: 30px;
 }
 
-/*하트 호버 효과*/
-#heart:hover{
-    width: 40px;
-    filter: invert(19%) sepia(89%) saturate(5229%) hue-rotate(355deg) brightness(93%) contrast(119%);
-    transition: all 0.1s;
-}
 
 header h1{
     color: white;
@@ -38,8 +30,12 @@ header img, button{
     max-width: 100px;
 }
 
+main {
+    padding-top: 120px; /* header가 fixed라서 위쪽 공간 확보 */
+}
+
 /*네비게이션*/
-nav{
+/* nav{
     position: fixed;
     background-color: pink;
     margin-top: 150px;
@@ -48,34 +44,48 @@ nav{
     width: 150px;
     text-align: center;
     border-radius: 15px;
-    z-index: 9999;
+    z-index: 1;
+} */
+
+nav{
+    position: fixed;
+    background-color: pink;
+    margin-top: 8rem;
+    margin-left: 1rem;
+    padding: 0.5rem 2rem 1rem 2rem;
+    width: 10rem;
+    text-align: center;
+    border-radius: 15px;
+    z-index: 1;
 }
 
-a{
+nav a{
     color: white;
     text-decoration: none;
 }
 
+.nav-btn1,
+.nav-btn2,
+.nav-btn3 {
+    background-color: #ff8498;
+    padding: 3px 50px;
+}
+
 .nav-btn1{
-    background-color: rgb(255, 132, 152);
     border-radius: 7px 7px 0px 0px;
-    padding: 3px 50px 3px 50px ;
 }
 
 .nav-btn2{
-    background-color: rgb(255, 132, 152);
-    padding: 3px 50px 3px 50px ;
+    padding: 3px 50px;
 
 }
 
 .nav-btn3{
-    background-color: rgb(255, 132, 152);
     border-radius: 0px 0px 7px 7px;
-    padding: 3px 50px 3px 50px ;
 }
 
 nav a:hover{
-    background-color: rgb(255, 108, 132);
+    background-color: #ff6c84;
     color: white;
 }
 
@@ -87,20 +97,25 @@ section{
     margin-right: 5px;
 }
 
-main {
-    padding-top: 120px; /* header가 fixed라서 위쪽 공간 확보 */
-}
-  
+/*유애나의 블로그입니다^^*/
+.blog-intro,
+.entire-area,
+.cat-area,
+.IU-area {
+    margin-top: 50px;
+    background-color: #f6efbf;
+    border-radius: 10px;
+}  
 
 /*그리드*/
-.first_container {
+.grid-gallery {
     display: grid;
     grid-template-columns: repeat(10, 1fr); /*비율!!!!!!*/
     grid-template-rows: repeat(4, 200px);
     gap: 10px;
 }
 
-.first_container img{
+.grid-gallery img{
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -132,28 +147,18 @@ main {
 }
 
 
-/*유애나의 블로그입니다^^*/
-.first_box{
+
+/*전체 영역*/
+.entire-area{
     margin-top: 50px;
-    background-color: rgb(246, 239, 191);
+    background-color: #f6efbf;
     border-radius: 10px;
 }
 
-
-/*전체*/
-.second_box{
-    margin-top: 50px;
-    background-color: rgb(246, 239, 191);
-    border-radius: 10px;
-}
-
-.second_container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.second_box img{
+/*이미지 최대 크기 설정*/
+.entire-area img,
+.cat-area img,
+.IU-area img{
     max-width: 200px;
 }
 
@@ -172,54 +177,22 @@ main {
 
 .img_block:hover{
     background-color: rgba(237, 227, 241, 0.913);
-    margin-bottom: 20px;
+    scale: 1.05;
     transition: 0.1s;
 }
 
-
-/*고양이*/
-.third_container{
+/*박스 안 이미지 배열 설정*/
+.entire-image-section,
+.cat-image-section,
+.IU-image-section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.third_box{
-    margin-top: 50px;
-    background-color: rgb(246, 239, 191);
-    border-radius: 10px;
-}
-
-.third_box img{
-    max-width: 200px;
-}
-
-/*아이유*/
-.fourth_container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.fourth_box{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-color: rgb(246, 239, 191);
-    border-radius: 10px;
-}
-
-
-.fourth_box img{
-    max-width: 200px;
-}
-
-
-/*푸터*/
-footer{
-    padding: 50px;
-    color: white;
-    background-color: rgb(175, 121, 204);
-    height: 100px;
+/*하트 호버 효과*/
+.fa-heart:hover {
+    color: red; 
 }
 
 
@@ -265,3 +238,10 @@ ul.list2{
     100%{ transform: translateX(0%) }
 }
 
+/*푸터*/
+footer{
+    padding: 50px;
+    color: white;
+    background-color: #af79cc;
+    height: 100px;
+}
