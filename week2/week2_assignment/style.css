@@ -1,0 +1,103 @@
+body{
+    padding: 2rem;
+}
+
+/*전체, 완료됨, 미완료, 중요도 필터 버튼 섹션*/
+.filter-section{
+    display: flex;
+}
+
+button{
+    color: white;
+    background-color: #a887d7;
+    border-radius: 8px;
+    border-style: none;
+    text-align: center;
+    margin: 0.3rem;
+    width: 5rem;
+    height: 3rem;
+}
+
+button:hover{
+    background-color: #8061aa;
+}
+
+.priority{
+    align-items: center;
+}
+
+.fa-caret-down{
+    margin-left: 0.5rem;
+}
+
+.priority,
+.importance-select,
+.add-todo,
+.delete-complete-btn
+{
+    display: flex;
+}
+
+/* 투두 섹션 */
+.todo-section{
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 0.5rem;
+    flex: 5;
+}
+
+/* 투두 추가 영역 */
+.add-todo-section{
+    display: flex;
+}
+
+.add-todo-section input{
+    flex:4;
+    margin: 0.3rem;
+    margin-right: 1rem;
+    border-radius: 7px;
+    border: 0.01rem solid;
+    border-color: #e3ddeb;
+}
+
+input:focus{
+    outline: 0.02rem solid #967bb7;
+}
+
+.importance-select,
+.add-todo{
+    align-items:center;
+    width: 7rem;
+}
+
+
+
+
+/* 투두 삭제, 완료 영역 */
+
+
+/* 투두 테이블 영역 */
+table{
+    border-collapse: collapse;
+    border: 0rem;
+    border-spacing: 0.1rem 0.1rem;
+    width: 100%;
+}
+
+th{
+    background-color: #a887d7;
+}
+
+th p{
+    color: white;
+}
+
+td{
+    background-color: rgb(240, 240, 229);
+}
+
+th, td{
+    text-align: center;
+    border: 0.1rem solid white;
+}

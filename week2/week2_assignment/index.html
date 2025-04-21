@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>투두 과제</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/102eb053c5.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -11,50 +12,32 @@
     <script type="module" src="index.js"></script>
     <!--전체, 완료됨, 미완료, 중요도 필터 버튼 섹션-->
     <header class="filter-section">
-        <button class="entire-btn">
-            <p>전체</p>
-        </button>
-        <button class="completed-btn">
-            <p>완료됨</p>
-        </button>
-        <button class="uncomplete-btn">
-            <p>미완료</p>
-        </button>
-        <button class="priority">
-            <p>중요도</p>
-            <i class="fa-solid fa-caret-down"></i>
-        </button>
+        <button class="entire-btn">전체</button>
+        <button class="completed-btn">완료됨</button>
+        <button class="uncomplete-btn">미완료</button>
+        <button class="priority">중요도<i class="fa-solid fa-caret-down"></i></button>
     </header>
     <!--투두 섹션-->
     <section class="todo-section">
         <!--투두 추가 영역-->
-        <div class="add-todo">
+        <div class="add-todo-section">
             <input type="text" placeholder="할 일을 입력하세요" />
-            <button class="importance-select">
-                <p>중요도 선택</p>
-                <i class="fa-solid fa-caret-down"></i>
-            </button>
-            <button class="add-todo">
-                <p>추가</p>
-            </button>
+            <button class="importance-select">중요도 선택<i class="fa-solid fa-caret-down"></i></button>
+            <button class="add-todo">추가</button>
         </div>
         <!--투두 삭제, 완료 영역-->
         <div class="delete-complete-btn">
-            <button class="delete-todo">
-                <p>삭제</p>
-            </button>
-            <button class="complete-todo">
-                <p>완료</p>
-            </button>
+            <button class="delete-todo">삭제</button>
+            <button class="complete-todo">완료</button>
         </div>
         <!--투두 테이블 영역-->
         <div class="todo-table-section">
             <table class="todo-table">
                 <tr class="table-head">
                     <th><input type="checkbox" unchecked/></th>
-                    <th>중요도</th>
-                    <th>완료됨</th>
-                    <th>할 일</th>
+                    <th><p>중요도</p></th>
+                    <th><p>완료됨</p></th>
+                    <th><p>할 일</p></th>
                 </tr>
                 <tr class="table-row">
                     <td></td>
