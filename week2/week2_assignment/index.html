@@ -15,14 +15,33 @@
         <button class="entire-btn">전체</button>
         <button class="completed-btn">완료됨</button>
         <button class="uncomplete-btn">미완료</button>
-        <button class="priority">중요도<i class="fa-solid fa-caret-down"></i></button>
+        <div class="filter-priority-dropdown">
+            <button onclick="toggleDropdown()" class="priority">
+                중요도<i class="fa-solid fa-caret-down"></i>
+            </button>
+                <ul class="filter-priority-drop-menu">
+                    <li onclick="filterImportance(1)">1</li>
+                    <li onclick="filterImportance(2)">2</li>
+                    <li onclick="filterImportance(3)">3</li>
+                </ul>
+            </div>
+        </div>
     </header>
     <!--투두 섹션-->
     <section class="todo-section">
         <!--투두 추가 영역-->
         <div class="add-todo-section">
-            <input type="text" placeholder="할 일을 입력하세요" />
-            <button class="importance-select">중요도 선택<i class="fa-solid fa-caret-down"></i></button>
+            <input class="todo-input" type="text" placeholder="할 일을 입력하세요" />
+            <div class="importance-select-dropdown">
+                <button onclick="toggleDropdown()" class="importance-select">
+                    중요도 선택<i class="fa-solid fa-caret-down"></i>
+                </button>
+                <ul class="importance-select-drop-menu">
+                    <li onclick="setImportance(1)">1</li>
+                    <li onclick="setImportance(2)">2</li>
+                    <li onclick="setImportance(3)">3</li>
+                </ul>
+            </div>
             <button class="add-todo">추가</button>
         </div>
         <!--투두 삭제, 완료 영역-->

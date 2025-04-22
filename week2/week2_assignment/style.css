@@ -16,6 +16,7 @@ button{
     margin: 0.3rem;
     width: 5rem;
     height: 3rem;
+    cursor: pointer;
 }
 
 button:hover{
@@ -51,6 +52,42 @@ button:hover{
 .add-todo-section{
     display: flex;
 }
+.filter-priority-drop-menu,
+.importance-select-drop-menu{
+    position: absolute;
+    visibility: hidden;
+    padding: 0;
+}
+
+div ul{
+    list-style: none;
+    z-index: 1;
+    display: flex;
+    width: 6rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+ul li:nth-child(1){
+    border-radius: 10px 10px 0px 0px;
+}
+
+ul li:nth-child(3){
+    border-radius: 0px 0px 10px 10px;
+}
+
+
+ul li{
+    color: black;
+    position: relative;
+    background-color: white;
+    padding: 0.5rem;
+}
+
+ul li:hover{
+    background-color: rgb(216, 216, 216);
+}
+
 
 .add-todo-section input{
     flex:4;
