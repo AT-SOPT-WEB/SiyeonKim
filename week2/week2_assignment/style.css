@@ -5,6 +5,7 @@ body{
 /*전체, 완료됨, 미완료, 중요도 필터 버튼 섹션*/
 .filter-section{
     display: flex;
+    align-items: center;
 }
 
 button{
@@ -23,16 +24,13 @@ button:hover{
     background-color: #8061aa;
 }
 
-.priority{
-    align-items: center;
+#importance-select,
+#priority-select{
+    border-radius: 10px;
+    height: 3rem;
+    margin: 0.3rem;
 }
 
-.fa-caret-down{
-    margin-left: 0.5rem;
-}
-
-.priority,
-.importance-select,
 .add-todo,
 .delete-complete-btn
 {
@@ -52,41 +50,6 @@ button:hover{
 .add-todo-section{
     display: flex;
 }
-.filter-priority-drop-menu,
-.importance-select-drop-menu{
-    position: absolute;
-    visibility: hidden;
-    padding: 0;
-}
-
-div ul{
-    list-style: none;
-    z-index: 1;
-    display: flex;
-    width: 6rem;
-    flex-direction: column;
-    text-align: center;
-}
-
-ul li:nth-child(1){
-    border-radius: 10px 10px 0px 0px;
-}
-
-ul li:nth-child(3){
-    border-radius: 0px 0px 10px 10px;
-}
-
-
-ul li{
-    color: black;
-    position: relative;
-    background-color: white;
-    padding: 0.5rem;
-}
-
-ul li:hover{
-    background-color: rgb(216, 216, 216);
-}
 
 
 .add-todo-section input{
@@ -102,13 +65,10 @@ input:focus{
     outline: 0.02rem solid #967bb7;
 }
 
-.importance-select,
 .add-todo{
     align-items:center;
-    width: 7rem;
+    width: 6rem;
 }
-
-
 
 
 /* 투두 삭제, 완료 영역 */
