@@ -17,9 +17,9 @@
         <button class="uncomplete-btn">미완료</button>
             <select name="priority" id="priority-select" >
                 <option value="" selected>중요도 선택</option>
-                <option value="pri1">1</option>
-                <option value="pri2">2</option>
-                <option value="pri3">3</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
             </select>
         </div>
     </header>
@@ -30,9 +30,9 @@
             <input class="todo-input" type="text" placeholder="할 일을 입력하세요" />
                 <select name="importance" id="importance-select">
                     <option value="" selected>중요도 선택</option>
-                    <option value="imp1">1</option>
-                    <option value="imp2">2</option>
-                    <option value="imp3">3</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                 </select>
             <button class="add-todo">추가</button>
         </div>
@@ -44,18 +44,17 @@
         <!--투두 테이블 영역-->
         <div class="todo-table-section">
             <table class="todo-table">
-                <tr class="table-head">
-                    <th><input type="checkbox" unchecked/></th>
-                    <th><p>중요도</p></th>
-                    <th><p>완료됨</p></th>
-                    <th><p>할 일</p></th>
-                </tr>
-                <tr class="table-row">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                <thead>
+                    <tr class="table-head">
+                        <th><input type="checkbox" unchecked/></th>
+                        <th><p>중요도</p></th>
+                        <th><p>완료됨</p></th>
+                        <th><p>할 일</p></th>
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+                    <!-- 여기에 JS로 <tr>들이 추가됨 -->
+                </tbody>
             </table>
         </div>
     </section>
