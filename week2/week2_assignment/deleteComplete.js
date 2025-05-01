@@ -37,6 +37,7 @@ export function completeTodo() {
     todos.forEach(todo => {
       if (checkedIds.includes(todo.id)) {
         todo.completed = true;
+        alert("할 일을 완료했습니다!");
       }
     });
 
