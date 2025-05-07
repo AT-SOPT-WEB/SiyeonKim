@@ -6,14 +6,15 @@ import { renderTable } from './todoTable.js';
 // 새로운 할 일 추가 함수
 export function addTodo() {
   const btn = document.querySelector('.add-todo');
-  btn.addEventListener('click', () => {
+  // 코드리뷰 반영: 핸들러 함수로 분리
+  function btnClick(){
     const todoInput = document.querySelector('.todo-input');
     const importance = document.querySelector('#importance-select');
     const todoTitle = todoInput.value.trim();
     const rawPriority = importance.value;
 
     if (todoTitle === '' || rawPriority === '') {
-        swal("할 일과 중요도 모두 입력해야 합니다!");
+        alert("할 일과 중요도 모두 입력해야 합니다!");
         return;
     }
     const priority = Number(rawPriority);
@@ -35,5 +36,7 @@ export function addTodo() {
 
     todoInput.value = '';
     importance.value = '';
-  });
+  }
+
+  btn.addEventListener ('click', btnClick);
 }
