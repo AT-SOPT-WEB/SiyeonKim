@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>투두 과제</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/102eb053c5.js" crossorigin="anonymous"></script>
+    <!--sweetAlert 사용-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!--javascript 불러오기-->
+    <script type="module" src="index.js"></script>
+</head>
+<body>
+    <!--전체, 완료됨, 미완료, 중요도 필터 버튼 섹션-->
+    <header class="filter-section">
+        <button class="entire-btn">전체</button>
+        <button class="completed-btn">완료됨</button>
+        <button class="uncomplete-btn">미완료</button>
+            <select name="priority" id="priority-select" >
+                <option value="" selected>중요도 선택</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+    </header>
+    <!--투두 섹션-->
+    <section class="todo-section">
+        <!--투두 추가 영역-->
+        <div class="add-todo-section">
+            <input class="todo-input" type="text" placeholder="할 일을 입력하세요" />
+                <select name="importance" id="importance-select">
+                    <option value="" selected>중요도 선택</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            <button class="add-todo">추가</button>
+        </div>
+        <!--투두 삭제, 완료 영역-->
+        <div class="delete-complete-btn">
+            <button class="delete-todo">삭제</button>
+            <button class="complete-todo">완료</button>
+        </div>
+        <!--투두 테이블 영역-->
+        <div class="todo-table-section">
+            <table class="todo-table">
+                <thead>
+                    <tr class="table-head">
+                        <th><input type="checkbox" unchecked/></th>
+                        <th><p>중요도</p></th>
+                        <th><p>완료됨</p></th>
+                        <th><p>할 일</p></th>
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+                    <!-- 여기에 JS로 <tr>들이 추가됨 -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+</body>
+</html>
