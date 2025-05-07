@@ -57,8 +57,7 @@ button:hover{
     margin: 0.3rem;
     margin-right: 1rem;
     border-radius: 7px;
-    border: 0.01rem solid;
-    border-color: #e3ddeb;
+    border: 0.01rem solid #e3ddeb; /*한 줄로 합칠 수 있다!*/
 }
 
 input:focus{

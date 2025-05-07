@@ -13,7 +13,7 @@ export function addTodo() {
     const rawPriority = importance.value;
 
     if (todoTitle === '' || rawPriority === '') {
-        alert("할 일과 중요도 모두 입력해야 합니다!");
+        swal("할 일과 중요도 모두 입력해야 합니다!");
         return;
     }
     const priority = Number(rawPriority);
